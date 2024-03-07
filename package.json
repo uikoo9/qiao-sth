@@ -1,0 +1,34 @@
+{
+  "name": "qiao-sth",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "prepare": "husky",
+    "build": "lerna run build",
+    "prettier": "qpro prettier",
+    "eslint": "qpro eslint",
+    "test": "lerna run test",
+    "lint": "npm run build && npm run test && npm run prettier && npm run eslint",
+    "postinstall": "npm run lint",
+    "cz": "qpro commitizen",
+    "pb": "lerna publish",
+    "graph": "nx graph",
+    "check": "qpro ncu && lerna exec 'qpro ncu' --concurrency=1",
+    "update": "qpro ncu u && lerna exec 'qpro ncu u' --concurrency=1",
+    "pkg": "qpro pkg ./packages",
+    "dpkg": "qpro pkg ./packages dev"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.0.3",
+    "@commitlint/config-conventional": "^19.0.3",
+    "ava": "^6.1.2",
+    "husky": "^9.0.11",
+    "jsdom": "^24.0.0",
+    "lerna": "^8.1.2",
+    "lint-staged": "^15.2.2",
+    "nx": "^18.0.7",
+    "qiao-project": "^4.5.1"
+  }
+}
