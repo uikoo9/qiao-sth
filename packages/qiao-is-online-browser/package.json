@@ -1,6 +1,6 @@
 {
   "name": "qiao-is-online-browser",
-  "version": "3.7.7",
+  "version": "3.7.8",
   "description": "is online and offline to online on browser",
   "keywords": [
     "browser",
@@ -28,7 +28,7 @@
     "test": "qwebpack build ./webpack/qiao.webpack.js"
   },
   "dependencies": {
-    "offline-to-online": "^3.7.7"
+    "offline-to-online": "^3.7.8"
   },
   "nx": {
     "namedInputs": {
