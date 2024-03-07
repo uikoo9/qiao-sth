@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "offline-to-online": "^3.2.0",
-    "qiao-ping": "^4.4.2"
+    "qiao-ping": "^4.5.1"
   },
   "nx": {
     "namedInputs": {
