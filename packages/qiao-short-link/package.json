@@ -22,7 +22,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uikoo9/qiao-z.git"
+    "url": "git+https://github.com/uikoo9/qiao-sth.git"
   },
   "scripts": {
     "build": "qpro rollup ./rollup.config.js",
