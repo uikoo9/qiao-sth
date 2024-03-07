@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/qiao-npms.svg?style=flat-square)](https://www.npmjs.org/package/qiao-npms)
 [![npm downloads](https://img.shields.io/npm/dm/qiao-npms.svg?style=flat-square)](https://npm-stat.com/charts.html?package=qiao-npms)
 
-浏览器和 nodejs 下获取 npm 信息
+浏览器和 nodejs 下获取 npm 信息。
 
 ## install
 

@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/qiao-is-online.svg?style=flat-square)](https://www.npmjs.org/package/qiao-is-online)
 [![npm downloads](https://img.shields.io/npm/dm/qiao-is-online.svg?style=flat-square)](https://npm-stat.com/charts.html?package=qiao-is-online)
 
-nodejs 检测用户是否在线
+nodejs 检测用户是否在线。
 
 - [一篇文章判断用户是否在线](https://blog.insistime.com/is-online)
 

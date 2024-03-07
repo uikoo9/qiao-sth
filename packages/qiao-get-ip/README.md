@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/qiao-get-ip.svg?style=flat-square)](https://www.npmjs.org/package/qiao-get-ip)
 [![npm downloads](https://img.shields.io/npm/dm/qiao-get-ip.svg?style=flat-square)](https://npm-stat.com/charts.html?package=qiao-get-ip)
 
-Get public network ip under browser and node.js
+Get public network ip under browser and node.js.
 
 ## install
 

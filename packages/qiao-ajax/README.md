@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/qiao-ajax.svg?style=flat-square)](https://www.npmjs.org/package/qiao-ajax)
 [![npm downloads](https://img.shields.io/npm/dm/qiao-ajax.svg?style=flat-square)](https://npm-stat.com/charts.html?package=qiao-ajax)
 
-浏览器和 nodejs 下请求能力，基于[axios](https://axios-http.com/)
+浏览器和 nodejs 下请求能力，基于[axios](https://axios-http.com/)。
 
 ## api
 
