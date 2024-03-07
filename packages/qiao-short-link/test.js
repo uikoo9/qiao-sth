@@ -11,7 +11,7 @@ const { shortLink } = require('./index.js');
 test('short link on nodejs', async (t) => {
   t.timeout(3000);
 
-  const link = await shortLink('https://insistime.com/', 500);
+  const link = await shortLink('https://insistime.com/', 1000);
   t.log(link);
   t.truthy(link);
 });

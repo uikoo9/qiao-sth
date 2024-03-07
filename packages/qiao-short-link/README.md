@@ -40,10 +40,3 @@ import { shortLink } from 'qiao-short-link';
 ```javascript
 const shortLink = await shortLink(longLink, timeout);
 ```
-
-## fast
-
-请求以下几个网站，返回最快的响应，默认超时时间为 300ms
-
-- [tiyee.cn](tiyee.cn)
-- [gotiny.cc](gotiny.cc)
