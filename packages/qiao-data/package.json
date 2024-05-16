@@ -1,0 +1,52 @@
+{
+  "name": "qiao-data",
+  "version": "5.0.1",
+  "description": "clarity data report",
+  "keywords": [
+    "clarity",
+    "data",
+    "report"
+  ],
+  "author": "uikoo9 <uikoo9@qq.com>",
+  "homepage": "https://code.insistime.com/#qiao-data",
+  "license": "MIT",
+  "main": "index.js",
+  "module": "src/index.js",
+  "sideEffets": false,
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uikoo9/qiao-sth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uikoo9/qiao-sth/issues"
+  },
+  "scripts": {
+    "build": "qpro rollup ./rollup.config.js"
+  },
+  "dependencies": {
+    "qiao.cookie.js": "^3.7.0",
+    "qiao.log.js": "^3.7.1",
+    "qiao.ls.js": "^3.7.0",
+    "uuid": "^9.0.1"
+  },
+  "nx": {
+    "namedInputs": {
+      "default": [
+        "{projectRoot}/src/**/*"
+      ]
+    },
+    "targets": {
+      "build": {
+        "inputs": [
+          "default"
+        ],
+        "outputs": [
+          "{projectRoot}/index.js"
+        ]
+      }
+    }
+  }
+}
