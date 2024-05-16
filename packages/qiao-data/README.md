@@ -27,20 +27,30 @@ import { reportPV } from 'qiao-data';
 
 上报页面 pv
 
-- timeout
-  - type: number
-  - desc: timeout, ms, default: 300ms
-- debug
-  - type: boolean
-  - desc: whether to display debug logs, default: false
-- return
-  - type: string
-  - desc: ip
+```javascript
+reportPV();
+```
+
+### reportUV
+
+上报页面 uv
+
+- domain
+  - 类型：string
+  - 备注：域名，例如`.electron-icns.com`
 
 ```javascript
-// ip
-const ip = await getIP(timeout);
+reportUV(domain);
+```
 
-// ip debug
-const ip = await getIP(timeout, true);
+### reportEvent
+
+上报自定义事件
+
+- event
+  - 类型：string
+  - 备注：自定义事件，例如`web.click.url`
+
+```javascript
+reportEvent(event);
 ```
