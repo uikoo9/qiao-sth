@@ -1,6 +1,6 @@
 {
   "name": "qiao-short-link",
-  "version": "5.0.1",
+  "version": "5.0.3",
   "description": "URL Shortener on Node.js and Browser",
   "keywords": [
     "permanent",
@@ -32,7 +32,7 @@
     "test": "ava"
   },
   "dependencies": {
-    "qiao-ajax": "^5.0.1",
+    "qiao-ajax": "^5.0.3",
     "qs": "^6.12.1"
   },
   "nx": {

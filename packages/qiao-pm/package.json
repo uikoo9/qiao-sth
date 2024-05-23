@@ -1,7 +1,7 @@
 {
   "name": "qiao-pm",
   "private": true,
-  "version": "0.0.1",
+  "version": "5.0.3",
   "scripts": {
     "build": "qpro rollup ./rollup.config.js",
     "upload": "qcos fo ./config.json ./dist ."
