@@ -18,7 +18,8 @@
     "check": "qpro ncu && lerna exec 'qpro ncu' --concurrency=1",
     "update": "qpro ncu u && lerna exec 'qpro ncu u' --concurrency=1",
     "pkg": "qpro pkg ./packages",
-    "dpkg": "qpro pkg ./packages dev"
+    "dpkg": "qpro pkg ./packages dev",
+    "upload": "lerna run upload"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.0.3",
@@ -29,6 +30,7 @@
     "lerna": "^8.1.2",
     "lint-staged": "^15.2.2",
     "nx": "^18.0.7",
+    "qiao-cos-cli": "^4.5.5",
     "qiao-project": "^4.5.2",
     "qiao-webpack": "^4.5.2"
   }

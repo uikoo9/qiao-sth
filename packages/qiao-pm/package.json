@@ -1,0 +1,33 @@
+{
+  "name": "qiao-pm",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "build": "qpro rollup ./rollup.config.js",
+    "upload": "qcos fo ./config.json ./dist ."
+  },
+  "dependencies": {
+    "qiao-ua": "^4.5.2",
+    "qiao.log.js": "^3.7.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4"
+  },
+  "nx": {
+    "namedInputs": {
+      "default": [
+        "{projectRoot}/src/**/*"
+      ]
+    },
+    "targets": {
+      "build": {
+        "inputs": [
+          "default"
+        ],
+        "outputs": [
+          "{projectRoot}/dist/pm.js"
+        ]
+      }
+    }
+  }
+}
