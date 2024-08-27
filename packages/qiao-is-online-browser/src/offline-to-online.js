@@ -1,5 +1,5 @@
 // offline to online
-import o from 'offline-to-online';
+import { offlineToOnlineWithSrc } from 'offline-to-online';
 
 // is online
 import { isOnline } from './is-online.js';
@@ -11,5 +11,5 @@ import { isOnline } from './is-online.js';
  * @param {*} time
  */
 export const offlineToOnline = (src, callback, time) => {
-  o.offlineToOnlineWithSrc(src, isOnline, callback, time);
+  offlineToOnlineWithSrc(src, isOnline, callback, time);
 };

@@ -1,6 +1,6 @@
 'use strict';
 
-var o = require('offline-to-online');
+var offlineToOnline$1 = require('offline-to-online');
 
 /**
  * isOnline
@@ -31,7 +31,7 @@ const isOnline = (src) => {
  * @param {*} time
  */
 const offlineToOnline = (src, callback, time) => {
-  o.offlineToOnlineWithSrc(src, isOnline, callback, time);
+  offlineToOnline$1.offlineToOnlineWithSrc(src, isOnline, callback, time);
 };
 
 exports.isOnline = isOnline;
