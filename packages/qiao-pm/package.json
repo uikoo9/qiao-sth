@@ -7,7 +7,7 @@
     "upload": "qcos fo ./config.json ./dist ."
   },
   "dependencies": {
-    "qiao-ua": "^4.5.2",
+    "qiao-ua": "^5.0.0",
     "qiao.log.js": "^3.7.1"
   },
   "devDependencies": {
