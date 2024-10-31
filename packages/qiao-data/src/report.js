@@ -2,22 +2,21 @@
 import { post } from 'qiao-ajax';
 
 // util
-import { getWebId, getUserId, constants } from './util.js';
+import { getWebId, getUserId } from './util.js';
 
 // Logger
 import { Logger } from 'qiao.log.js';
 const logger = Logger('qiao-data');
 
 /**
- * reportEvent
+ * reportWebData
+ * @param {*} appId
+ * @param {*} appKey
  * @param {*} appName
  * @param {*} eventName
  * @param {*} eventDetail
- * @returns
  */
-export const reportEvent = async (appName, eventName, eventDetail) => {
-  const methodName = 'reportEvent';
-
+export const reportWebData = async (appId, appKey, appName, eventName, eventDetail) => {
   // const
   const data_app_name = appName;
   const data_web_url = window.location.href;
@@ -27,12 +26,70 @@ export const reportEvent = async (appName, eventName, eventDetail) => {
   const data_event_detail = eventDetail || '';
 
   // report
+  await report(
+    appId,
+    appKey,
+    data_app_name,
+    data_web_url,
+    data_web_id,
+    data_user_id,
+    data_event_name,
+    data_event_detail,
+  );
+};
+
+/**
+ * reportServerData
+ * @param {*} appId
+ * @param {*} appKey
+ * @param {*} appName
+ * @param {*} webUrl
+ * @param {*} userId
+ * @param {*} eventName
+ * @param {*} eventDetail
+ */
+export const reportServerData = async (appId, appKey, appName, webUrl, userId, eventName, eventDetail) => {
+  // const
+  const data_app_name = appName;
+  const data_web_url = webUrl;
+  const data_web_id = '';
+  const data_user_id = userId;
+  const data_event_name = eventName;
+  const data_event_detail = eventDetail || '';
+
+  // report
+  await report(
+    appId,
+    appKey,
+    data_app_name,
+    data_web_url,
+    data_web_id,
+    data_user_id,
+    data_event_name,
+    data_event_detail,
+  );
+};
+
+// report
+async function report(
+  appId,
+  appKey,
+  data_app_name,
+  data_web_url,
+  data_web_id,
+  data_user_id,
+  data_event_name,
+  data_event_detail,
+) {
+  const methodName = 'report';
+
+  // report
   try {
     // options
     const options = {
       data: {
-        dataAppId: constants.dataAppId,
-        dataAppKey: constants.dataAppKey,
+        dataAppId: appId,
+        dataAppKey: appKey,
         data_app_name: data_app_name,
         data_web_url: data_web_url,
         data_web_id: data_web_id,
@@ -44,7 +101,7 @@ export const reportEvent = async (appName, eventName, eventDetail) => {
     logger.info(methodName, 'options', options);
 
     // post
-    const res = await post(constants.dataUrl, options);
+    const res = await post('https://data.vincentqiao.com/', options);
 
     // check status
     if (res.status !== 200) {
@@ -63,4 +120,4 @@ export const reportEvent = async (appName, eventName, eventDetail) => {
   } catch (error) {
     logger.error(methodName, 'error', error);
   }
-};
+}

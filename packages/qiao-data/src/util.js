@@ -5,15 +5,6 @@ import { cookie } from 'qiao.cookie.js';
 import { v4 as uuidv4 } from 'uuid';
 
 /**
- * constants
- */
-export const constants = {
-  dataUrl: 'https://data.vincentqiao.com/',
-  dataAppId: 'ZAaFUcFoNc',
-  dataAppKey: 'tHAcFnmLUhvbrdZYXxEl',
-};
-
-/**
  * getWebId
  * @returns
  */

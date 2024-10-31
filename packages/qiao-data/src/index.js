@@ -1,5 +1,5 @@
 // report
-import { reportEvent } from './report.js';
+import { reportWebData, reportServerData } from './report.js';
 
 // Logger
 import { Logger } from 'qiao.log.js';
@@ -8,10 +8,18 @@ const logger = Logger('qiao-data');
 /**
  * app
  */
-export default (appName) => {
+export default (appId, appKey, appName) => {
   const methodName = 'constructor';
 
   // check
+  if (!appId) {
+    logger.error(methodName, 'need appId');
+    return;
+  }
+  if (!appKey) {
+    logger.error(methodName, 'need appKey');
+    return;
+  }
   if (!appName) {
     logger.error(methodName, 'need appName');
     return;
@@ -19,8 +27,11 @@ export default (appName) => {
 
   // app
   const app = {};
-  app.report = (eventName, eventDetail) => {
-    reportEvent(appName, eventName, eventDetail);
+  app.reportWebData = (eventName, eventDetail) => {
+    reportWebData(appId, appKey, appName, eventName, eventDetail);
+  };
+  app.reportServerData = (webUrl, userId, eventName, eventDetail) => {
+    reportServerData(appId, appKey, appName, webUrl, userId, eventName, eventDetail);
   };
 
   //
