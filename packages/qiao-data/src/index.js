@@ -30,8 +30,8 @@ export default (appId, appKey, appName) => {
   app.reportWebData = (eventName, eventDetail) => {
     reportWebData(appId, appKey, appName, eventName, eventDetail);
   };
-  app.reportServerData = (webUrl, userId, eventName, eventDetail) => {
-    reportServerData(appId, appKey, appName, webUrl, userId, eventName, eventDetail);
+  app.reportServerData = (userId, eventName, eventDetail) => {
+    reportServerData(appId, appKey, appName, userId, eventName, eventDetail);
   };
 
   //

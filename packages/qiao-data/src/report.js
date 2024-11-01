@@ -19,23 +19,13 @@ const logger = Logger('qiao-data');
 export const reportWebData = async (appId, appKey, appName, eventName, eventDetail) => {
   // const
   const data_app_name = appName;
-  const data_web_url = window.location.href;
   const data_web_id = getWebId();
   const data_user_id = getUserId();
   const data_event_name = eventName;
   const data_event_detail = eventDetail || '';
 
   // report
-  await report(
-    appId,
-    appKey,
-    data_app_name,
-    data_web_url,
-    data_web_id,
-    data_user_id,
-    data_event_name,
-    data_event_detail,
-  );
+  await report(appId, appKey, data_app_name, data_web_id, data_user_id, data_event_name, data_event_detail);
 };
 
 /**
@@ -43,44 +33,24 @@ export const reportWebData = async (appId, appKey, appName, eventName, eventDeta
  * @param {*} appId
  * @param {*} appKey
  * @param {*} appName
- * @param {*} webUrl
  * @param {*} userId
  * @param {*} eventName
  * @param {*} eventDetail
  */
-export const reportServerData = async (appId, appKey, appName, webUrl, userId, eventName, eventDetail) => {
+export const reportServerData = async (appId, appKey, appName, userId, eventName, eventDetail) => {
   // const
   const data_app_name = appName;
-  const data_web_url = webUrl;
   const data_web_id = '';
   const data_user_id = userId;
   const data_event_name = eventName;
   const data_event_detail = eventDetail || '';
 
   // report
-  await report(
-    appId,
-    appKey,
-    data_app_name,
-    data_web_url,
-    data_web_id,
-    data_user_id,
-    data_event_name,
-    data_event_detail,
-  );
+  await report(appId, appKey, data_app_name, data_web_id, data_user_id, data_event_name, data_event_detail);
 };
 
 // report
-async function report(
-  appId,
-  appKey,
-  data_app_name,
-  data_web_url,
-  data_web_id,
-  data_user_id,
-  data_event_name,
-  data_event_detail,
-) {
+async function report(appId, appKey, data_app_name, data_web_id, data_user_id, data_event_name, data_event_detail) {
   const methodName = 'report';
 
   // report
@@ -91,7 +61,6 @@ async function report(
         dataAppId: appId,
         dataAppKey: appKey,
         data_app_name: data_app_name,
-        data_web_url: data_web_url,
         data_web_id: data_web_id,
         data_user_id: data_user_id,
         data_event_name: data_event_name,
