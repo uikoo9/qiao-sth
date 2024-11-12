@@ -1,6 +1,9 @@
 // cookie
 import { cookie } from 'qiao.cookie.js';
 
+// ls
+import { ls } from 'qiao.ls.js';
+
 // uuid
 import { v4 as uuidv4 } from 'uuid';
 
@@ -10,12 +13,15 @@ import { v4 as uuidv4 } from 'uuid';
  */
 export const getWebId = () => {
   const webidKey = 'ist_webid';
-  const webid = cookie(webidKey);
+  const webid = ls(webidKey) || cookie(webidKey);
   if (webid) return webid;
 
   // set
   const uuid = uuidv4();
+  ls(webidKey, uuid);
   cookie(webidKey, uuid);
+
+  // r
   return uuid;
 };
 
@@ -24,5 +30,6 @@ export const getWebId = () => {
  * @returns
  */
 export const getUserId = () => {
-  return cookie('userid');
+  const userinfo = ls('userinfo');
+  return userinfo && userinfo.id ? userinfo.id : cookie('userid');
 };

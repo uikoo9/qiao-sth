@@ -2,6 +2,7 @@
 
 var qiaoAjax = require('qiao-ajax');
 var qiao_cookie_js = require('qiao.cookie.js');
+var qiao_ls_js = require('qiao.ls.js');
 var uuid = require('uuid');
 var qiao_log_js = require('qiao.log.js');
 
@@ -13,12 +14,15 @@ var qiao_log_js = require('qiao.log.js');
  */
 const getWebId = () => {
   const webidKey = 'ist_webid';
-  const webid = qiao_cookie_js.cookie(webidKey);
+  const webid = qiao_ls_js.ls(webidKey) || qiao_cookie_js.cookie(webidKey);
   if (webid) return webid;
 
   // set
   const uuid$1 = uuid.v4();
+  qiao_ls_js.ls(webidKey, uuid$1);
   qiao_cookie_js.cookie(webidKey, uuid$1);
+
+  // r
   return uuid$1;
 };
 
@@ -27,7 +31,8 @@ const getWebId = () => {
  * @returns
  */
 const getUserId = () => {
-  return qiao_cookie_js.cookie('userid');
+  const userinfo = qiao_ls_js.ls('userinfo');
+  return userinfo && userinfo.id ? userinfo.id : qiao_cookie_js.cookie('userid');
 };
 
 // post
