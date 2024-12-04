@@ -7,7 +7,7 @@
     "ping"
   ],
   "author": "uikoo9 <uikoo9@qq.com>",
-  "homepage": "https://code.insistime.com/#qiao-ping",
+  "homepage": "https://code.vincentqiao.com/#qiao-ping",
   "license": "MIT",
   "main": "index.js",
   "module": "src/index.js",
