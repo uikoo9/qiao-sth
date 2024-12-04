@@ -22,8 +22,8 @@
     "upload": "lerna run upload"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.5.0",
-    "@commitlint/config-conventional": "^19.5.0",
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
     "ava": "^6.2.0",
     "husky": "^9.1.6",
     "jsdom": "^25.0.1",
