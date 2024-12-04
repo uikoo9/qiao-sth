@@ -7,8 +7,8 @@
     "upload": "qcos fo ./config.json ./dist ."
   },
   "dependencies": {
-    "qiao-ua": "^5.0.0",
-    "qiao.log.js": "^3.7.1"
+    "qiao-ua": "^5.0.1",
+    "qiao.log.js": "^3.7.3"
   },
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4"
