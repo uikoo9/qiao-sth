@@ -11,7 +11,7 @@ const { shortLink } = require('./index.js');
 test('short link on nodejs', async (t) => {
   t.timeout(3000);
 
-  const link = await shortLink('https://insistime.com/', 1000);
+  const link = await shortLink('https://vincentqiao.com/', 1000);
   t.log(link);
   t.truthy(link);
 });
@@ -23,7 +23,7 @@ test('short link on browser', async (t) => {
   const dom = new JSDOM('', { url: 'http://localhost' });
   global.document = dom.window.document;
 
-  const link = await shortLink('https://insistime.com/', 1000);
+  const link = await shortLink('https://vincentqiao.com/', 1000);
   t.log(link);
   t.truthy(link);
 });

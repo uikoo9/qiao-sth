@@ -139,7 +139,7 @@ await getVersion(packageName);
           bugs: 'https://github.com/uikoo9/qiao-nodejs/issues'
         },
         author: { name: 'uikoo9', email: 'uikoo9@qq.com' },
-        publisher: { username: 'npm_insistime', email: 'npm@insistime.com' },
+        publisher: { username: 'npm_insistime', email: 'npm@vincentqiao.com' },
         maintainers: [ [Object] ]
       }
     ]

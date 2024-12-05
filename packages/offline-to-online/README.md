@@ -5,7 +5,7 @@
 
 浏览器和 nodejs 下检测用户从离线到在线。
 
-- [一篇文章判断用户是否在线](https://blog.insistime.com/is-online)
+- [一篇文章判断用户是否在线](https://blog.vincentqiao.com/is-online)
 
 ## install
 

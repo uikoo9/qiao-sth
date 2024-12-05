@@ -5,7 +5,7 @@
 
 nodejs 下 ping 能力。
 
-- [一篇文章判断用户是否在线](https://blog.insistime.com/is-online)
+- [一篇文章判断用户是否在线](https://blog.vincentqiao.com/is-online)
 
 ## install
 
@@ -41,8 +41,8 @@ ping 域名
   - 说明: 结果
   - ```javascript
     {
-      inputHost: 'insistime.com',
-      host: 'insistime.com',
+      inputHost: 'vincentqiao.com',
+      host: 'vincentqiao.com',
       alive: true,
       output: '',
       time: 10.636,
