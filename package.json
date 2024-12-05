@@ -30,8 +30,8 @@
     "lerna": "^8.1.9",
     "lint-staged": "^15.2.10",
     "nx": "^20.1.4",
-    "qiao-cos-cli": "^4.7.2",
-    "qiao-project": "^4.7.2",
-    "qiao-webpack": "^4.7.2"
+    "qiao-cos-cli": "^4.7.4",
+    "qiao-project": "^4.7.4",
+    "qiao-webpack": "^4.7.5"
   }
 }
