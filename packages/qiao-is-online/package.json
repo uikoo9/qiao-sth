@@ -1,6 +1,6 @@
 {
   "name": "qiao-is-online",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "description": "is online and offline to online on nodejs",
   "keywords": [
     "nodejs",
@@ -28,8 +28,8 @@
     "test": "ava"
   },
   "dependencies": {
-    "offline-to-online": "^5.1.0",
-    "qiao-ping": "^5.1.0"
+    "offline-to-online": "^5.1.1",
+    "qiao-ping": "^5.1.1"
   },
   "nx": {
     "namedInputs": {

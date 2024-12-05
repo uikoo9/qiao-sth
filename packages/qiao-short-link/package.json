@@ -1,6 +1,6 @@
 {
   "name": "qiao-short-link",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "description": "URL Shortener on Node.js and Browser",
   "keywords": [
     "permanent",
