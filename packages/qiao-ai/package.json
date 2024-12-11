@@ -1,0 +1,52 @@
+{
+  "name": "qiao-ai",
+  "version": "5.1.2",
+  "description": "data report",
+  "keywords": [
+    "data",
+    "report"
+  ],
+  "author": "uikoo9 <uikoo9@qq.com>",
+  "homepage": "https://code.vincentqiao.com/#qiao-ai",
+  "license": "MIT",
+  "main": "index.js",
+  "module": "src/index.js",
+  "sideEffets": false,
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uikoo9/qiao-sth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uikoo9/qiao-sth/issues"
+  },
+  "scripts": {
+    "build": "qpro rollup ./rollup.config.js"
+  },
+  "dependencies": {
+    "qiao-ajax": "^5.1.0",
+    "qiao.cookie.js": "^3.7.3",
+    "qiao.log.js": "^3.7.3",
+    "qiao.ls.js": "^3.7.4",
+    "uuid": "^11.0.3"
+  },
+  "nx": {
+    "namedInputs": {
+      "default": [
+        "{projectRoot}/src/**/*"
+      ]
+    },
+    "targets": {
+      "build": {
+        "inputs": [
+          "default"
+        ],
+        "outputs": [
+          "{projectRoot}/index.js"
+        ]
+      }
+    }
+  }
+}
