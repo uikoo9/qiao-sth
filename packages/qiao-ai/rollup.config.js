@@ -7,5 +7,5 @@ module.exports = {
     file: 'index.js',
     format: 'cjs',
   },
-  external: ['qiao.cookie.js', 'qiao.ls.js', 'qiao.log.js', 'uuid'],
+  external: ['qiao.log.js', 'openai'],
 };

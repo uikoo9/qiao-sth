@@ -1,8 +1,3 @@
-'use strict';
-
-var OpenAI = require('openai');
-var qiao_log_js = require('qiao.log.js');
-
 // default msg
 const defaultMsg = [
   {
@@ -17,7 +12,7 @@ const defaultMsg = [
  * @param {*} client
  * @param {*} msg
  */
-const chat = async (client, msg) => {
+export const chat = async (client, msg) => {
   // completion
   const completion = await client.chat.completions.create({
     model: 'moonshot-v1-8k',
@@ -41,38 +36,3 @@ const chat = async (client, msg) => {
   // r
   return completion.choices[0].message.content;
 };
-
-// openai
-const logger = qiao_log_js.Logger('qiao-ai');
-
-/**
- * KIMI
- * @param {*} apiKey
- * @returns
- */
-const KIMI = (apiKey) => {
-  const methodName = 'KIMI';
-
-  // check
-  if (!apiKey) {
-    logger.error(methodName, 'need apiKey');
-    return;
-  }
-
-  // client
-  const client = new OpenAI({
-    apiKey: apiKey,
-    baseURL: 'https://api.moonshot.cn/v1',
-  });
-
-  // app
-  const app = {};
-  app.singleChat = async (msg) => {
-    return await chat(client, msg);
-  };
-
-  //
-  return app;
-};
-
-exports.KIMI = KIMI;

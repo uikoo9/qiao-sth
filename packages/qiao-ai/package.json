@@ -1,10 +1,9 @@
 {
   "name": "qiao-ai",
   "version": "5.1.2",
-  "description": "data report",
+  "description": "ai tools",
   "keywords": [
-    "data",
-    "report"
+    "kimi"
   ],
   "author": "uikoo9 <uikoo9@qq.com>",
   "homepage": "https://code.vincentqiao.com/#qiao-ai",
@@ -26,11 +25,8 @@
     "build": "qpro rollup ./rollup.config.js"
   },
   "dependencies": {
-    "qiao-ajax": "^5.1.0",
-    "qiao.cookie.js": "^3.7.3",
-    "qiao.log.js": "^3.7.3",
-    "qiao.ls.js": "^3.7.4",
-    "uuid": "^11.0.3"
+    "openai": "^4.76.1",
+    "qiao.log.js": "^3.7.3"
   },
   "nx": {
     "namedInputs": {
