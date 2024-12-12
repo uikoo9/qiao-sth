@@ -10,16 +10,19 @@ const defaultMsg = [
 /**
  * chat
  * @param {*} client
- * @param {*} msg
+ * @param {*} msgs
  */
-export const chat = async (client, msg) => {
+export const chat = async (client, msgs) => {
+  // messages
+  const messages = msgs.map((msg) => ({
+    role: 'user',
+    content: msg,
+  }));
+
   // completion
   const completion = await client.chat.completions.create({
     model: 'moonshot-v1-8k',
-    messages: defaultMsg.concat({
-      role: 'user',
-      content: msg,
-    }),
+    messages: defaultMsg.concat(messages),
     temperature: 0.3,
   });
 

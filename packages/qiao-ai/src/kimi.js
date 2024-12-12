@@ -28,8 +28,8 @@ export const KIMI = (apiKey) => {
 
   // app
   const app = {};
-  app.singleChat = async (msg) => {
-    return await chat(client, msg);
+  app.chat = async (msgs) => {
+    return await chat(client, msgs);
   };
 
   //

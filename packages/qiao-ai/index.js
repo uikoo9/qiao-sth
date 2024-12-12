@@ -15,16 +15,19 @@ const defaultMsg = [
 /**
  * chat
  * @param {*} client
- * @param {*} msg
+ * @param {*} msgs
  */
-const chat = async (client, msg) => {
+const chat = async (client, msgs) => {
+  // messages
+  const messages = msgs.map((msg) => ({
+    role: 'user',
+    content: msg,
+  }));
+
   // completion
   const completion = await client.chat.completions.create({
     model: 'moonshot-v1-8k',
-    messages: defaultMsg.concat({
-      role: 'user',
-      content: msg,
-    }),
+    messages: defaultMsg.concat(messages),
     temperature: 0.3,
   });
 
@@ -67,8 +70,8 @@ const KIMI = (apiKey) => {
 
   // app
   const app = {};
-  app.singleChat = async (msg) => {
-    return await chat(client, msg);
+  app.chat = async (msgs) => {
+    return await chat(client, msgs);
   };
 
   //
