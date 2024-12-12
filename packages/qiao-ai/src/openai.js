@@ -15,18 +15,17 @@ export const chat = async (client, model, messages, callback) => {
   };
   if (callback) options.stream = true;
 
-  // completion
-  const completion = await client.chat.completions.create(options);
-
   // stream
   if (callback) {
-    completion.on('content', (delta) => {
+    const stream = await client.chat.completions.stream(options);
+    stream.on('content', (delta) => {
       callback(delta);
     });
     return;
   }
 
-  // check
+  // completion
+  const completion = await client.chat.completions.create(options);
   if (
     !completion ||
     !completion.choices ||
