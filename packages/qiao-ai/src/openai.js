@@ -15,26 +15,19 @@ export const chat = async (client, model, messages, callback) => {
   };
   if (callback) options.stream = true;
 
+  // res
+  const res = await client.chat.completions.create(options);
+
   // stream
   if (callback) {
-    const stream = await client.chat.completions.stream(options);
-    stream.on('content', (delta) => {
-      callback(delta);
-    });
+    for await (const chunk of res) {
+      callback(chunk.choices[0]?.delta?.content || '');
+    }
     return;
   }
 
   // completion
-  const completion = await client.chat.completions.create(options);
-  if (
-    !completion ||
-    !completion.choices ||
-    !completion.choices.length ||
-    !completion.choices[0].message ||
-    !completion.choices[0].message.content
-  )
-    return;
-
-  // r
-  return completion.choices[0].message.content;
+  return !res || !res.choices || !res.choices.length || !res.choices[0].message || !res.choices[0].message.content
+    ? null
+    : res.choices[0].message.content;
 };
