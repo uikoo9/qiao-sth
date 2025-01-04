@@ -1,0 +1,37 @@
+{
+  "name": "qiao-fetch",
+  "version": "0.0.1",
+  "description": "nodejs fetch",
+  "license": "MIT",
+  "main": "index.js",
+  "module": "src/index.js",
+  "sideEffects": false,
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "build": "qpro rollup ./rollup.config.js"
+  },
+  "dependencies": {
+    "qiao-ajax": "^5.1.0",
+    "qiao-json": "^5.0.1",
+    "qiao.log.js": "^3.7.3"
+  },
+  "nx": {
+    "namedInputs": {
+      "default": [
+        "{projectRoot}/src/**/*"
+      ]
+    },
+    "targets": {
+      "build": {
+        "inputs": [
+          "default"
+        ],
+        "outputs": [
+          "{projectRoot}/index.js"
+        ]
+      }
+    }
+  }
+}
