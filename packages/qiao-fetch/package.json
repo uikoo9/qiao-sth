@@ -1,6 +1,6 @@
 {
   "name": "qiao-fetch",
-  "version": "0.0.1",
+  "version": "5.1.9",
   "description": "nodejs fetch",
   "license": "MIT",
   "main": "index.js",
@@ -13,7 +13,7 @@
     "build": "qpro rollup ./rollup.config.js"
   },
   "dependencies": {
-    "qiao-ajax": "^5.1.0",
+    "qiao-ajax": "^5.1.9",
     "qiao-json": "^5.0.1",
     "qiao.log.js": "^3.7.3"
   },
