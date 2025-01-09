@@ -1,6 +1,6 @@
 {
   "name": "qiao-regions",
-  "version": "5.1.9",
+  "version": "5.2.0",
   "description": "countries and states",
   "license": "MIT",
   "main": "index.js",
@@ -12,7 +12,6 @@
   "scripts": {
     "build": "qpro rollup ./rollup.config.js"
   },
-  "dependencies": {},
   "nx": {
     "namedInputs": {
       "default": [
