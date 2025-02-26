@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "qiao-ajax": "^5.1.9",
-    "qs": "^6.13.1"
+    "qs": "^6.14.0"
   },
   "nx": {
     "namedInputs": {

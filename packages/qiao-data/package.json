@@ -30,7 +30,7 @@
     "qiao.cookie.js": "^3.7.3",
     "qiao.log.js": "^3.7.3",
     "qiao.ls.js": "^3.7.4",
-    "uuid": "^11.0.3"
+    "uuid": "^11.1.0"
   },
   "nx": {
     "namedInputs": {

@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "qiao-ajax": "^5.1.9",
-    "qiao-json": "^5.0.1",
+    "qiao-json": "^5.1.9",
     "qiao.log.js": "^3.7.3"
   },
   "nx": {

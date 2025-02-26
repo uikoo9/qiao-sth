@@ -88,8 +88,8 @@ async function report(appId, appKey, data_app_name, data_web_id, data_user_id, d
     // options
     const options = {
       data: {
-        dataAppId: appId,
-        dataAppKey: appKey,
+        appId: appId,
+        appKey: appKey,
         data_app_name: data_app_name,
         data_web_id: data_web_id,
         data_user_id: data_user_id,
