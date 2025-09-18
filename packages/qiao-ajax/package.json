@@ -1,6 +1,6 @@
 {
   "name": "qiao-ajax",
-  "version": "5.2.1",
+  "version": "5.2.4",
   "description": "browser ajax and nodejs http request",
   "keywords": [
     "browser",

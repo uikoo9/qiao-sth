@@ -1,6 +1,6 @@
 {
   "name": "qiao-data",
-  "version": "5.2.1",
+  "version": "5.2.4",
   "description": "data report",
   "keywords": [
     "data",
@@ -26,7 +26,7 @@
     "build": "qpro rollup ./rollup.config.js"
   },
   "dependencies": {
-    "qiao-ajax": "^5.2.1",
+    "qiao-ajax": "^5.2.4",
     "qiao.cookie.js": "^3.7.5",
     "qiao.log.js": "^3.7.5",
     "qiao.ls.js": "^3.7.5",
