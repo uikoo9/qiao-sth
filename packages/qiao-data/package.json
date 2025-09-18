@@ -27,10 +27,10 @@
   },
   "dependencies": {
     "qiao-ajax": "^5.2.1",
-    "qiao.cookie.js": "^3.7.3",
-    "qiao.log.js": "^3.7.3",
-    "qiao.ls.js": "^3.7.4",
-    "uuid": "^11.1.0"
+    "qiao.cookie.js": "^3.7.5",
+    "qiao.log.js": "^3.7.5",
+    "qiao.ls.js": "^3.7.5",
+    "uuid": "^13.0.0"
   },
   "nx": {
     "namedInputs": {

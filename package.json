@@ -22,16 +22,16 @@
     "upload": "lerna run upload"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.7.1",
-    "@commitlint/config-conventional": "^19.7.1",
-    "ava": "^6.2.0",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "ava": "^6.4.1",
     "husky": "^9.1.7",
-    "jsdom": "^26.0.0",
-    "lerna": "^8.2.0",
-    "lint-staged": "^15.4.3",
+    "jsdom": "^27.0.0",
+    "lerna": "^8.2.4",
+    "lint-staged": "^16.1.6",
     "nx": "^20.4.6",
-    "qiao-cos-cli": "^4.7.4",
-    "qiao-project": "^4.7.4",
-    "qiao-webpack": "^4.7.5"
+    "qiao-cos-cli": "^5.0.0",
+    "qiao-project": "^5.0.0",
+    "qiao-webpack": "^5.0.0"
   }
 }

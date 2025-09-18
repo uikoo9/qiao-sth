@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "qiao-ua": "^5.1.9",
-    "qiao.log.js": "^3.7.3"
+    "qiao.log.js": "^3.7.5"
   },
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4"
